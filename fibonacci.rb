@@ -15,5 +15,6 @@ class Fibonacci
 
   def generate(n)
     return n if (0..1).include? n
+    result(n - 1) + result(n - 2)
   end
 end
