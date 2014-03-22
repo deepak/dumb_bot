@@ -1,17 +1,19 @@
 class Fibonacci
-  attr_accessor :n, :result
+  attr_accessor :n, :results
 
   def initialize
-    @i = 0
-    @result = {}
+    @n = 0
+    @results = {}
   end
 
   def result(n)
-    @result[n] || generate(n)
+    @n = n
+    @results[n] ||= generate(n)
   end
 
   private
 
   def generate(n)
+    return n if (0..1).include? n
   end
 end
